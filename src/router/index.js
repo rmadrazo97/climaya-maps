@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+// importing views
 import Home from '../views/Home.vue'
+import map1 from '../views/maps/Map.vue'
+
 
 Vue.use(VueRouter)
 
@@ -9,6 +13,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/map',
+    name: 'map',
+    component: map1
   },
   {
     path: '/about',
