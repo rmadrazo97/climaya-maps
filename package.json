@@ -17,8 +17,11 @@
     "vue-100vh": "^0.1.1",
     "vue-html2canvas": "^0.0.4",
     "vue-router": "^3.4.6",
+    "vue-weathericons": "^0.0.3",
     "vue2-leaflet": "^2.5.2",
-    "vuetify": "^2.2.11"
+    "vue2-leaflet-fullscreen": "^1.0.0",
+    "vuetify": "^2.2.11",
+    "weathericons": "^2.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
