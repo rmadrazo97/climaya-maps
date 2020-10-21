@@ -1,0 +1,1752 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "204526287",
+        "properties": {
+          "data": "METAR",
+          "id": "KMIA",
+          "site": "Miami Intl",
+          "prior": 0,
+          "obsTime": "2020-10-16T17:53:00Z",
+          "temp": 30,
+          "dewp": 23.9,
+          "wspd": 10,
+          "wdir": 100,
+          "ceil": 190,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "26",
+          "cldCvg2": "SCT",
+          "cldBas2": "60",
+          "cldCvg3": "BKN",
+          "cldBas3": "190",
+          "cldCvg4": "BKN",
+          "cldBas4": "250",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1014,
+          "slp": 1013.9,
+          "rawOb": "KMIA 161753Z 10010KT 10SM SCT026 SCT060 BKN190 BKN250 30/24 A2994 RMK AO2 LTG DSNT N AND SW SLP139 CB DSNT SW-NW-N T03000239 10317 20250 58022"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.317,
+            25.788
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204539897",
+        "properties": {
+          "marker-color": "#a04646",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "data": "METAR",
+          "id": "MMMD",
+          "site": "Merida Intl",
+          "prior": 0,
+          "obsTime": "2020-10-16T17:42:00Z",
+          "temp": 31,
+          "dewp": 22,
+          "wspd": 6,
+          "wdir": 10,
+          "ceil": 20,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": 20,
+          "visib": 7,
+          "fltcat": "MVFR",
+          "altim": 1015,
+          "slp": 1015.7,
+          "rawOb": "MMMD 161742Z 01006KT 7SM BKN020 31/22 A2997 RMK SLP157 52012 932 8/100 MDTCU"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -89.659,
+            20.936
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204540233",
+        "properties": {
+          "data": "METAR",
+          "id": "MMMX",
+          "site": "Mexico City Intl",
+          "prior": 0,
+          "obsTime": "2020-10-16T17:48:00Z",
+          "temp": 18,
+          "dewp": 8,
+          "wspd": 5,
+          "wdir": 320,
+          "ceil": 200,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "20",
+          "cldCvg2": "SCT",
+          "cldBas2": "70",
+          "cldCvg3": "BKN",
+          "cldBas3": "200",
+          "visib": 8,
+          "fltcat": "VFR",
+          "altim": 1029.2,
+          "slp": 1013.6,
+          "rawOb": "MMMX 161748Z 32005KT 8SM SCT020 SCT070 BKN200 18/08 A3039 NOSIG RMK SLP136 57007 931 8/538 HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.072,
+            19.436
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204529609",
+        "properties": {
+          "data": "METAR",
+          "id": "MROC",
+          "site": "San Jose/Santamaria",
+          "prior": 0,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 27,
+          "dewp": 20,
+          "wspd": 7,
+          "wdir": 240,
+          "ceil": 30,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "30",
+          "visib": 6.21,
+          "fltcat": "MVFR",
+          "altim": 1015,
+          "rawOb": "MROC 161800Z 24007KT 180V290 9999 BKN030 27/20 A2997 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -84.218,
+            9.991
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542517",
+        "properties": {
+          "data": "METAR",
+          "id": "MWCR",
+          "site": "Grand Cayman/Roberts",
+          "prior": 0,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 27,
+          "dewp": 25,
+          "wspd": 7,
+          "wdir": 250,
+          "ceil": 18,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "18",
+          "visib": 6.21,
+          "fltcat": "MVFR",
+          "altim": 1012,
+          "rawOb": "MWCR 161800Z 25007KT 200V320 9999 BKN018 27/25 Q1012"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -81.357,
+            19.294
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204543001",
+        "properties": {
+          "data": "METAR",
+          "id": "SKBO",
+          "site": "Bogota/El Dorado Arp",
+          "prior": 0,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 19,
+          "dewp": 9,
+          "wspd": 7,
+          "wdir": 110,
+          "ceil": 25,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "25",
+          "visib": 6.21,
+          "fltcat": "MVFR",
+          "altim": 1026.2,
+          "rawOb": "SKBO 161800Z 11007KT 9999 BKN025 19/09 A3030 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.151,
+            4.706
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204546851",
+        "properties": {
+          "data": "METAR",
+          "id": "SVMI",
+          "site": "Caracas/Bolivar Intl",
+          "prior": 0,
+          "obsTime": "2020-10-16T18:02:00Z",
+          "wspd": 7,
+          "wdir": 280,
+          "cover": "CLR",
+          "cldCvg1": "CLR",
+          "altim": 1011,
+          "rawOb": "SVMI 161802Z AUTO 28007KT NCD ///// Q1011"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.991,
+            10.603
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204554293",
+        "properties": {
+          "data": "METAR",
+          "id": "TJSJ",
+          "site": "San Juan/Marin Intl",
+          "prior": 0,
+          "obsTime": "2020-10-16T18:16:00Z",
+          "temp": 27.2,
+          "dewp": 25,
+          "wspd": 3,
+          "wdir": 170,
+          "ceil": 65,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "22",
+          "cldCvg2": "SCT",
+          "cldBas2": "35",
+          "cldCvg3": "BKN",
+          "cldBas3": "65",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1012.6,
+          "wx": "TS",
+          "rawOb": "TJSJ 161816Z 17003KT 10SM TS SCT022 SCT035CB BKN065 27/25 A2990 RMK AO2 RAB1758E05 TSB16 OCNL LTGICCG SE-SW TS SE-SW MOV NW VCSH NE S-W P0000 T02720250"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.011,
+            18.433
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204531175",
+        "properties": {
+          "data": "METAR",
+          "id": "KBRO",
+          "site": "Brownsville Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:53:00Z",
+          "temp": 31.1,
+          "dewp": 22.2,
+          "wspd": 10,
+          "wdir": 360,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "26",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1019.4,
+          "slp": 1019.2,
+          "rawOb": "KBRO 161753Z 36010KT 10SM FEW026 31/22 A3010 RMK AO2 SLP192 T03110222 10317 20228 58001"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.423,
+            25.915
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204525709",
+        "properties": {
+          "data": "METAR",
+          "id": "MBPV",
+          "site": "Providenciales Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 24,
+          "wspd": 8,
+          "wdir": 110,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "15",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1012,
+          "rawOb": "MBPV 161800Z 11008KT 9999 SCT015 31/24 Q1012"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72.265,
+            21.772
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542925",
+        "properties": {
+          "data": "METAR",
+          "id": "MDSD",
+          "site": "Santo Domingo/Americ",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 28,
+          "dewp": 26,
+          "wspd": 3,
+          "wdir": 60,
+          "ceil": 17,
+          "cover": "BKN",
+          "cldCvg1": "FEW",
+          "cldBas1": "16",
+          "cldCvg2": "BKN",
+          "cldBas2": "17",
+          "cldCvg3": "SCT",
+          "cldBas3": "300",
+          "visib": 4.97,
+          "fltcat": "MVFR",
+          "altim": 1012,
+          "wx": "VCTS SH",
+          "rawOb": "MDSD 161800Z 06003KT 8000 VCTSSH FEW016CB BKN017 SCT300 28/26 Q1012 CB/NE/E/S/N"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -69.667,
+            18.433
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542951",
+        "properties": {
+          "data": "METAR",
+          "id": "MHPL",
+          "site": "Puerto Lempira Arpt",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "wspd": 0,
+          "wdir": 0,
+          "ceil": 26,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "26",
+          "cldCvg2": "SCT",
+          "cldBas2": "80",
+          "visib": 6.21,
+          "fltcat": "MVFR",
+          "altim": 1010,
+          "rawOb": "MHPL 161800Z 00000KT 9999 BKN026TCU SCT080 ///// Q1010"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -83.776,
+            15.262
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541131",
+        "properties": {
+          "data": "METAR",
+          "id": "MMGL",
+          "site": "Guadalajara/Hildago",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:50:00Z",
+          "temp": 25,
+          "dewp": 6,
+          "wspd": 13,
+          "wdir": 80,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "300",
+          "visib": 15,
+          "fltcat": "VFR",
+          "altim": 1023.5,
+          "slp": 1011.7,
+          "rawOb": "MMGL 161750Z 08013KT 15SM SCT300 25/06 A3022 RMK SLP117 52003 923 8/001"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -103.312,
+            20.523
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204536267",
+        "properties": {
+          "data": "METAR",
+          "id": "MMMT",
+          "site": "Minatitlan Arpt",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:49:00Z",
+          "temp": 30,
+          "dewp": 24,
+          "wspd": 10,
+          "wdir": 30,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "30",
+          "cldCvg2": "SCT",
+          "cldBas2": "80",
+          "visib": 7,
+          "fltcat": "VFR",
+          "altim": 1013,
+          "slp": 1021.1,
+          "rawOb": "MMMT 161749Z 03010KT 7SM SCT030 SCT080 30/24 A2991 RMK SLP211 52008 931 8/230 HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -94.583,
+            18.098
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541111",
+        "properties": {
+          "data": "METAR",
+          "id": "MMTC",
+          "site": "Torreon/Tinoco Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:42:00Z",
+          "temp": 27,
+          "dewp": 9,
+          "wspd": 8,
+          "wdir": 60,
+          "cover": "SKC",
+          "cldCvg1": "SKC",
+          "visib": 8,
+          "fltcat": "VFR",
+          "altim": 1023.8,
+          "slp": 1014,
+          "rawOb": "MMTC 161742Z 06008KT 8SM SKC 27/09 A3023 RMK SLP140 54000 940 HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -103.408,
+            25.564
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204540339",
+        "properties": {
+          "data": "METAR",
+          "id": "MMTM",
+          "site": "Tampico/Mina Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:42:00Z",
+          "temp": 29,
+          "dewp": 23,
+          "wspd": 7,
+          "wdir": 70,
+          "ceil": 200,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "20",
+          "cldCvg2": "BKN",
+          "cldBas2": "200",
+          "visib": 8,
+          "fltcat": "VFR",
+          "altim": 1017.7,
+          "slp": 1017.8,
+          "rawOb": "MMTM 161742Z 07007KT 8SM SCT020 BKN200 29/23 A3005 RMK SLP178 52006 9// 8/108 TCU ISOL"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.863,
+            22.29
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204536605",
+        "properties": {
+          "data": "METAR",
+          "id": "MPTO",
+          "site": "Tocumen Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 24,
+          "wspd": 8,
+          "wdir": 160,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "18",
+          "cldCvg2": "SCT",
+          "cldBas2": "90",
+          "visib": 5.59,
+          "fltcat": "VFR",
+          "altim": 1009,
+          "wx": "VCSH",
+          "rawOb": "MPTO 161800Z 16008KT 9000 VCSH SCT018CB SCT090 31/24 Q1009 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.391,
+            9.056
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542907",
+        "properties": {
+          "data": "METAR",
+          "id": "MSLP",
+          "site": "El Salvador Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:50:00Z",
+          "temp": 32,
+          "dewp": 25,
+          "wspd": 4,
+          "wdir": 160,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "23",
+          "cldCvg2": "FEW",
+          "cldBas2": "33",
+          "cldCvg3": "FEW",
+          "cldBas3": "37",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1010,
+          "rawOb": "MSLP 161750Z 16004KT 060V230 9999 FEW023 FEW033TCU FEW037CB 32/25 Q1010 A2984 NOSIG RMK TCU N CB N E NW"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -89.056,
+            13.438
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204538105",
+        "properties": {
+          "data": "METAR",
+          "id": "MUCU",
+          "site": "Santiago de Cuba Arp",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:50:00Z",
+          "temp": 32,
+          "dewp": 25,
+          "wspd": 11,
+          "wdir": 130,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "20",
+          "visib": 5.59,
+          "fltcat": "VFR",
+          "altim": 1012,
+          "rawOb": "MUCU 161750Z 13011KT 9000 SCT020 32/25 Q1012"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.837,
+            19.971
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204538093",
+        "properties": {
+          "data": "METAR",
+          "id": "MUHA",
+          "site": "Havana/Marti Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T17:55:00Z",
+          "temp": 32,
+          "dewp": 23,
+          "wspd": 3,
+          "wdir": 170,
+          "ceil": 30,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "30",
+          "visib": 5.59,
+          "fltcat": "MVFR",
+          "altim": 1014,
+          "rawOb": "MUHA 161755Z 17003KT 120V230 9000 BKN030 32/23 Q1014"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82.41,
+            22.991
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542911",
+        "properties": {
+          "data": "METAR",
+          "id": "MZBZ",
+          "site": "Belize/Goldson Intl",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 25,
+          "dewp": 25,
+          "wspd": 3,
+          "wdir": 210,
+          "cover": "SCT",
+          "cldCvg1": "FEW",
+          "cldBas1": "10",
+          "cldCvg2": "SCT",
+          "cldBas2": "35",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1013,
+          "wx": "-RA",
+          "rawOb": "MZBZ 161800Z 21003KT 9999 -RA FEW010 SCT035 25/25 A2993 Q1013 RETS NOSIG RMK LR-3"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -88.309,
+            17.538
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204534831",
+        "properties": {
+          "data": "METAR",
+          "id": "SKBQ",
+          "site": "Barranquilla/Cortiss",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 32,
+          "dewp": 26,
+          "wspd": 10,
+          "wdir": 360,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "15",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1007.9,
+          "rawOb": "SKBQ 161800Z 36010KT 320V030 9999 FEW015 32/26 A2976 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.78,
+            10.883
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204543635",
+        "properties": {
+          "data": "METAR",
+          "id": "SVPA",
+          "site": "Puerto Ayacucho/Aram",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:02:00Z",
+          "rawOb": "SVPA 161802Z AUTO NIL"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -67.605,
+            5.622
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542915",
+        "properties": {
+          "data": "METAR",
+          "id": "TFFR",
+          "site": "Guadeloupe/Pitre Int",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 30,
+          "dewp": 25,
+          "wspd": 10,
+          "wdir": 140,
+          "cover": "CAVOK",
+          "cldCvg1": "CAVOK",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1013,
+          "rawOb": "TFFR 161800Z AUTO 14010KT 100V170 CAVOK 30/25 Q1013 TEMPO VRB15G25KT 1200 TSRA SCT008 BKN012CB"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -61.532,
+            16.265
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542917",
+        "properties": {
+          "data": "METAR",
+          "id": "TGPY",
+          "site": "St Georges/Pt Saline",
+          "prior": 1,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 25,
+          "wspd": 18,
+          "wdir": 90,
+          "cover": "SCT",
+          "cldCvg1": "FEW",
+          "cldBas1": "14",
+          "cldCvg2": "SCT",
+          "cldBas2": "18",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1011,
+          "rawOb": "TGPY 161800Z 09018KT 9999 FEW014CB SCT018 31/25 Q1011 NOSIG CB-SE/SSE/S/NW TCU-SE/NW"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -61.797,
+            12.006
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204526133",
+        "properties": {
+          "data": "METAR",
+          "id": "KCRP",
+          "site": "Corpus Christi Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:51:00Z",
+          "temp": 17.8,
+          "dewp": 13.9,
+          "wspd": 18,
+          "wgst": 24,
+          "wdir": 20,
+          "ceil": 16,
+          "cover": "OVC",
+          "cldCvg1": "OVC",
+          "cldBas1": "16",
+          "visib": 10,
+          "fltcat": "MVFR",
+          "altim": 1023.5,
+          "slp": 1023,
+          "wx": "-RA",
+          "rawOb": "KCRP 161751Z 02018G24KT 10SM -RA OVC016 18/14 A3022 RMK AO2 PK WND 01027/1730 RAB09 SLP230 P0000 60000 T01780139 10200 20178 51008"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.513,
+            27.773
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204526375",
+        "properties": {
+          "data": "METAR",
+          "id": "KEYW",
+          "site": "Key West Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:53:00Z",
+          "temp": 30,
+          "dewp": 25,
+          "wspd": 6,
+          "wdir": 190,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "30",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1014.3,
+          "slp": 1014.2,
+          "wx": "VCTS",
+          "rawOb": "KEYW 161753Z 19006KT 10SM VCTS SCT030 30/25 A2995 RMK AO2 LTG DSNT NW-NE TSB28E43 PRESFR SLP142 T03000250 10306 20283 56013"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -81.755,
+            24.557
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204526211",
+        "properties": {
+          "data": "METAR",
+          "id": "KTPA",
+          "site": "Tampa Intl Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:53:00Z",
+          "temp": 32.2,
+          "dewp": 20,
+          "wspd": 7,
+          "wdir": 30,
+          "ceil": 250,
+          "cover": "BKN",
+          "cldCvg1": "FEW",
+          "cldBas1": "38",
+          "cldCvg2": "SCT",
+          "cldBas2": "60",
+          "cldCvg3": "BKN",
+          "cldBas3": "250",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1016.3,
+          "slp": 1016.2,
+          "rawOb": "KTPA 161753Z 03007KT 10SM FEW038 SCT060 BKN250 32/20 A3001 RMK AO2 SLP162 T03220200 10333 20244 58014"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82.54,
+            27.963
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204554049",
+        "properties": {
+          "data": "METAR",
+          "id": "MGGT",
+          "site": "Guatemala/Aurora Arp",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:15:00Z",
+          "wspd": 10,
+          "wdir": 360,
+          "ceil": 90,
+          "cover": "OVC",
+          "cldCvg1": "SCT",
+          "cldBas1": "16",
+          "cldCvg2": "OVC",
+          "cldBas2": "90",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "wx": "-DZ",
+          "rawOb": "MGGT 161815Z 36010KT 9999 -DZ SCT016 OVC090"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -90.526,
+            14.585
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204543507",
+        "properties": {
+          "data": "METAR",
+          "id": "MGMM",
+          "site": "Mundo Maya Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 24,
+          "wspd": 4,
+          "wdir": 330,
+          "ceil": 20,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "20",
+          "visib": 6.21,
+          "fltcat": "MVFR",
+          "altim": 1014,
+          "rawOb": "MGMM 161800Z 33004KT 9999 BKN020TCU 31/24 Q1014 A2994 TCU E"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -89.866,
+            16.914
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542949",
+        "properties": {
+          "data": "METAR",
+          "id": "MHCA",
+          "site": "Catacamas Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 28,
+          "dewp": 24,
+          "wspd": 0,
+          "wdir": 0,
+          "ceil": 70,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "20",
+          "cldCvg2": "BKN",
+          "cldBas2": "70",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "rawOb": "MHCA 161800Z 00000KT 9999 SCT020TCU BKN070 28/24 RMK VCSH E S SW"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -85.775,
+            14.875
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542897",
+        "properties": {
+          "data": "METAR",
+          "id": "MHLM",
+          "site": "San Pedro Sula/Moral",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 23,
+          "wspd": 5,
+          "wdir": 90,
+          "ceil": 80,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "26",
+          "cldCvg2": "BKN",
+          "cldBas2": "80",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1012,
+          "rawOb": "MHLM 161800Z 09005KT 9999 SCT026CB BKN080 31/23 Q1012 A2989 TEMPO 6000 RA"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -87.934,
+            15.442
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204540127",
+        "properties": {
+          "data": "METAR",
+          "id": "MKJP",
+          "site": "Kingston/Manley Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 32,
+          "dewp": 25,
+          "wspd": 11,
+          "wdir": 180,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "22",
+          "cldCvg2": "FEW",
+          "cldBas2": "24",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1011,
+          "rawOb": "MKJP 161800Z 18011KT 9999 FEW022 FEW024CB 32/25 Q1011"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -76.798,
+            17.942
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541725",
+        "properties": {
+          "data": "METAR",
+          "id": "MMAA",
+          "site": "Acapulco/Alvarez Int",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:47:00Z",
+          "temp": 31,
+          "dewp": 25,
+          "wspd": 4,
+          "wdir": 180,
+          "ceil": 300,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "15",
+          "cldCvg2": "BKN",
+          "cldBas2": "300",
+          "visib": 6,
+          "fltcat": "VFR",
+          "altim": 1010.9,
+          "slp": 1010.3,
+          "rawOb": "MMAA 161747Z 18004KT 6SM SCT015 BKN300 31/25 A2985 RMK SLP103 57003 910 8/102 HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.754,
+            16.758
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541115",
+        "properties": {
+          "data": "METAR",
+          "id": "MMAS",
+          "site": "Aguascalientes Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:45:00Z",
+          "temp": 23,
+          "dewp": 4,
+          "wspd": 5,
+          "wdir": 70,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "20",
+          "cldCvg2": "SCT",
+          "cldBas2": "200",
+          "visib": 9,
+          "fltcat": "VFR",
+          "altim": 1027.2,
+          "slp": 1010.5,
+          "rawOb": "MMAS 161745Z 07005KT 9SM SCT020 SCT200 23/04 A3033 RMK SLP105 8/108 HZY PRESFR"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -102.318,
+            21.702
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541121",
+        "properties": {
+          "data": "METAR",
+          "id": "MMCV",
+          "site": "Ciudad Victoria Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:43:00Z",
+          "temp": 29,
+          "dewp": 14,
+          "wspd": 16,
+          "wdir": 300,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "30",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1020.4,
+          "rawOb": "MMCV 161743Z 30016KT 10SM SCT030 29/14 A3013 RMK SLP/// 57008 944 8/500 ISOL AS"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.959,
+            23.706
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204540317",
+        "properties": {
+          "data": "METAR",
+          "id": "MMDO",
+          "site": "Durango/Victoria Int",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:41:00Z",
+          "temp": 24,
+          "dewp": 5,
+          "wspd": 5,
+          "wdir": 60,
+          "cover": "SKC",
+          "cldCvg1": "SKC",
+          "visib": 14,
+          "fltcat": "VFR",
+          "altim": 1026.8,
+          "slp": 1011.2,
+          "rawOb": "MMDO 161741Z 06005KT 14SM SKC 24/05 A3032 RMK SLP112 57005 965"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.532,
+            24.124
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204546695",
+        "properties": {
+          "data": "METAR",
+          "id": "MMMM",
+          "site": "Morelia/Mujica Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:44:00Z",
+          "temp": 24,
+          "dewp": 7,
+          "wspd": 8,
+          "wdir": 10,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "200",
+          "visib": 8,
+          "fltcat": "VFR",
+          "altim": 1024.8,
+          "slp": 1011.2,
+          "rawOb": "MMMM 161744Z 01008KT 8SM FEW200 24/07 A3026 RMK SLP112 57011 925 8/001"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -101.037,
+            19.844
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204541133",
+        "properties": {
+          "data": "METAR",
+          "id": "MMMY",
+          "site": "Monterrey Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:42:00Z",
+          "temp": 24,
+          "dewp": 13,
+          "wspd": 10,
+          "wgst": 23,
+          "wdir": 350,
+          "ceil": 60,
+          "cover": "OVC",
+          "cldCvg1": "BKN",
+          "cldBas1": "60",
+          "cldCvg2": "OVC",
+          "cldBas2": "80",
+          "visib": 8,
+          "fltcat": "VFR",
+          "altim": 1022.8,
+          "rawOb": "MMMY 161742Z 35010G23KT 8SM BKN060 OVC080 24/13 A3020 RMK SLP/// 5//// 9// 8/01/"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -100.104,
+            25.774
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204540237",
+        "properties": {
+          "data": "METAR",
+          "id": "MMOX",
+          "site": "Oaxaca/Xoxocotlan In",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:48:00Z",
+          "temp": 24,
+          "dewp": 11,
+          "wspd": 1,
+          "wdir": 50,
+          "ceil": 30,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "30",
+          "cldCvg2": "BKN",
+          "cldBas2": "200",
+          "visib": 10,
+          "fltcat": "MVFR",
+          "altim": 1023.5,
+          "rawOb": "MMOX 161748Z 05001KT 10SM BKN 030 BKN 200 24/11 A3022 RMK 8/104"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -96.724,
+            17.002
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204539899",
+        "properties": {
+          "data": "METAR",
+          "id": "MMTG",
+          "site": "Tuxtla Gutierre Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:44:00Z",
+          "temp": 30,
+          "dewp": 21,
+          "wspd": 5,
+          "wdir": 70,
+          "cover": "SCT",
+          "cldCvg1": "FEW",
+          "cldBas1": "20",
+          "cldCvg2": "SCT",
+          "cldBas2": "300",
+          "visib": 7,
+          "fltcat": "VFR",
+          "altim": 1014.3,
+          "slp": 1007.7,
+          "rawOb": "MMTG 161744Z 07005KT 7SM FEW020 SCT300 30/21 A2995 RMK SLP077 57010 918 8/102 TCU DSTN NE HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.03,
+            16.571
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204537627",
+        "properties": {
+          "data": "METAR",
+          "id": "MMTP",
+          "site": "Tapachula Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:51:00Z",
+          "temp": 31,
+          "dewp": 26,
+          "wspd": 5,
+          "wdir": 230,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "30",
+          "cldCvg2": "SCT",
+          "cldBas2": "80",
+          "visib": 10,
+          "fltcat": "VFR",
+          "altim": 1011.3,
+          "slp": 1013.6,
+          "rawOb": "MMTP 161751Z 23005KT 10SM SCT030TCU SCT080 31/26 A2986 RMK SLP136 54000 918 8/260 HZY"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.371,
+            14.795
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204536273",
+        "properties": {
+          "data": "METAR",
+          "id": "MMUN",
+          "site": "Cancun Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:49:00Z",
+          "temp": 29,
+          "dewp": 25,
+          "wspd": 6,
+          "wdir": 70,
+          "ceil": 100,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "15",
+          "cldCvg2": "BKN",
+          "cldBas2": "100",
+          "cldCvg3": "BKN",
+          "cldBas3": "250",
+          "visib": 7,
+          "fltcat": "VFR",
+          "altim": 1014.6,
+          "slp": 1014.8,
+          "wx": "TS",
+          "rawOb": "MMUN 161749Z 07006KT 7SM TS SCT015CB BKN100 BKN250 29/25 A2996 RMK SLP148 57005 929 8/963 TSB45"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.855,
+            21.038
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204546185",
+        "properties": {
+          "data": "METAR",
+          "id": "MMVR",
+          "site": "Veracruz/Jara Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:43:00Z",
+          "temp": 26,
+          "dewp": 24,
+          "wspd": 4,
+          "wdir": 360,
+          "ceil": 30,
+          "cover": "OVC",
+          "cldCvg1": "FEW",
+          "cldBas1": "10",
+          "cldCvg2": "SCT",
+          "cldBas2": "20",
+          "cldCvg3": "BKN",
+          "cldBas3": "30",
+          "cldCvg4": "OVC",
+          "cldBas4": "50",
+          "visib": 6,
+          "fltcat": "MVFR",
+          "altim": 1016,
+          "slp": 1015.2,
+          "rawOb": "MMVR 161743Z 36004KT 6SM FEW010 SCT020 BKN030 OVC050 26/24 A3000 RMK SLP152 52010 942 8/7// HZY OCNL DROPS VRB COND"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -96.189,
+            19.144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204555027",
+        "properties": {
+          "data": "METAR",
+          "id": "MNBL",
+          "site": "Bluefields Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 29,
+          "dewp": 25,
+          "wspd": 4,
+          "wdir": 40,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "19",
+          "cldCvg2": "SCT",
+          "cldBas2": "300",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1010,
+          "rawOb": "MNBL 161800Z 04004KT 9999 SCT019 SCT300 29/25 Q1010"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -83.768,
+            11.995
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204546837",
+        "properties": {
+          "data": "METAR",
+          "id": "MNMG",
+          "site": "Managua Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 23,
+          "wspd": 10,
+          "wdir": 80,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "24",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1009,
+          "rawOb": "MNMG 161800Z 08010KT 9999 SCT024 31/23 Q1009 A2981 TCU/NE/NW 2AC070 1CI300 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.177,
+            12.141
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542133",
+        "properties": {
+          "data": "METAR",
+          "id": "MPDA",
+          "site": "David/Malek Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 24,
+          "wspd": 6,
+          "wdir": 200,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "18",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1009,
+          "rawOb": "MPDA 161800Z 20006KT 9999 SCT018 31/24 Q1009"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82.434,
+            8.391
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204542933",
+        "properties": {
+          "data": "METAR",
+          "id": "MTPP",
+          "site": "Port Au Prince Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:51:00Z",
+          "temp": 34,
+          "dewp": 22,
+          "wspd": 5,
+          "wdir": 140,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "28",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1010,
+          "rawOb": "MTPP 161751Z 14005KT 9999 SCT028TCU 34/22 Q1010 A2984 TCU/ SW"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72.305,
+            18.577
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204538101",
+        "properties": {
+          "data": "METAR",
+          "id": "MUCM",
+          "site": "Camaguey/Agramonte A",
+          "prior": 2,
+          "obsTime": "2020-10-16T17:50:00Z",
+          "temp": 32,
+          "dewp": 23,
+          "wspd": 7,
+          "wdir": 40,
+          "ceil": 20,
+          "cover": "BKN",
+          "cldCvg1": "BKN",
+          "cldBas1": "20",
+          "visib": 5.59,
+          "fltcat": "MVFR",
+          "altim": 1013,
+          "rawOb": "MUCM 161750Z 04007KT 010V120 9000 BKN020 32/23 Q1013"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -77.85,
+            21.42
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204537843",
+        "properties": {
+          "data": "METAR",
+          "id": "MYNN",
+          "site": "Nassau Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 32,
+          "dewp": 25,
+          "wspd": 9,
+          "wdir": 170,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "18",
+          "cldCvg2": "SCT",
+          "cldBas2": "25",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1015,
+          "rawOb": "MYNN 161800Z 17009KT 9999 SCT018CB SCT025 32/25 A2997 RETS"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -77.467,
+            25.04
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204543211",
+        "properties": {
+          "data": "METAR",
+          "id": "SKCL",
+          "site": "Cali/Aragon Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 30,
+          "dewp": 20,
+          "wspd": 4,
+          "wdir": 60,
+          "ceil": 120,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "30",
+          "cldCvg2": "BKN",
+          "cldBas2": "120",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1013,
+          "rawOb": "SKCL 161800Z 06004KT 020V140 9999 SCT030TCU BKN120 30/20 A2991 NOSIG RMK TCU N/SE"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -76.382,
+            3.543
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204534841",
+        "properties": {
+          "data": "METAR",
+          "id": "SKSP",
+          "site": "San Andres Isl Arpt",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 26,
+          "dewp": 26,
+          "wspd": 4,
+          "wdir": 0,
+          "ceil": 80,
+          "cover": "BKN",
+          "cldCvg1": "SCT",
+          "cldBas1": "12",
+          "cldCvg2": "BKN",
+          "cldBas2": "80",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1010.2,
+          "wx": "TS",
+          "rawOb": "SKSP 161800Z VRB04KT 9999 TS SCT012CB BKN080 26/26 A2983"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -81.704,
+            12.587
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204543627",
+        "properties": {
+          "data": "METAR",
+          "id": "SVMC",
+          "site": "Maracaibo/La Chinita",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:02:00Z",
+          "temp": 33,
+          "dewp": 24,
+          "wspd": 4,
+          "wdir": 130,
+          "cover": "CLR",
+          "cldCvg1": "CLR",
+          "altim": 1009,
+          "rawOb": "SVMC 161802Z AUTO 13004KT NCD 33/24 Q1009"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -71.728,
+            10.558
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204539691",
+        "properties": {
+          "data": "METAR",
+          "id": "TNCC",
+          "site": "Curacao/Hato Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 31,
+          "dewp": 24,
+          "wspd": 15,
+          "wdir": 90,
+          "cover": "FEW",
+          "cldCvg1": "FEW",
+          "cldBas1": "28",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1009,
+          "rawOb": "TNCC 161800Z 09015KT 9999 FEW028 31/24 Q1009 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -68.96,
+            12.189
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204548471",
+        "properties": {
+          "data": "METAR",
+          "id": "TNCM",
+          "site": "St Maarten Intl",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 26,
+          "dewp": 25,
+          "wspd": 14,
+          "wgst": 25,
+          "wdir": 90,
+          "ceil": 14,
+          "cover": "BKN",
+          "cldCvg1": "FEW",
+          "cldBas1": "8",
+          "cldCvg2": "BKN",
+          "cldBas2": "14",
+          "visib": 4.97,
+          "fltcat": "MVFR",
+          "altim": 1015,
+          "wx": "-SHRA",
+          "rawOb": "TNCM 161800Z 09014G25KT 8000 -SHRA FEW008 BKN014TCU 26/25 Q1015 TEMPO SHRA"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -63.109,
+            18.041
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "204544249",
+        "properties": {
+          "data": "METAR",
+          "id": "TTPP",
+          "site": "Port of Spain/Piarco",
+          "prior": 2,
+          "obsTime": "2020-10-16T18:00:00Z",
+          "temp": 33,
+          "dewp": 22,
+          "wspd": 10,
+          "wdir": 100,
+          "cover": "SCT",
+          "cldCvg1": "SCT",
+          "cldBas1": "22",
+          "visib": 6.21,
+          "fltcat": "VFR",
+          "altim": 1011,
+          "rawOb": "TTPP 161800Z 10010KT 9999 SCT022 33/22 Q1011 NOSIG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -61.348,
+            10.593
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -90.087890625,
+            29.84064389983441
+          ]
+        }
+      }
+    ]
+  }

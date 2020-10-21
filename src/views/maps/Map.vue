@@ -1,7 +1,7 @@
 <template>
 
   <vue100vh :css="{height: '100rvh'}">
-
+    <span v-if="loading">Loading...</span>
     <l-map
       id="map"
       v-if="showMap"
@@ -108,78 +108,45 @@
       </l-control> -->
 
       <!-- menu -->
-      <l-control position="topleft">
+      <l-control position="topleft" v-if="menu_type"> 
         <template>
-          <v-card>
+          <v-card >
             <v-navigation-drawer
               permanent
               expand-on-hover
             >
-                <v-list>
-                  <v-list-item>
-                    <v-list-item-icon>
-                      <v-icon>mdi-home</v-icon>
-                    </v-list-item-icon>
+                  
+              <v-list>
+                <v-list-group
+                  v-for="item in menus"
+                  :key="item.title"
+                  v-model="item.active"
+                  :prepend-icon="item.icon"
+                  no-action
+                >
+                  <template v-slot:activator>
+                    <v-list-item-content>
+                      <v-list-item-title v-text="item.title"></v-list-item-title>
+                    </v-list-item-content>
+                  </template>
 
-                    <v-list-item-title>Home</v-list-item-title>
-                  </v-list-item>
-
-                  <v-list-group
-                    :value="true"
-                    prepend-icon="mdi-account-circle"
-                  >
-                    <template v-slot:activator>
-                      <v-list-item-title>Users</v-list-item-title>
-                    </template>
-
-                    <v-list-group
-                      :value="true"
-                      no-action
-                      sub-group
+                  <v-radio-group v-model="item.selected_option" :mandatory="false">
+                    <v-list-item
+                      v-for="child in item.items"
+                      :key="child.title"
                     >
-                      <template v-slot:activator>
-                        <v-list-item-content>
-                          <v-list-item-title>Admin</v-list-item-title>
-                        </v-list-item-content>
-                      </template>
+                      <v-list-item-content class="pl-3">                        
+                        <v-radio
+                          :key="child.title"
+                          :label="child.title"
+                          :value="child.value"
+                        ></v-radio>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-radio-group>
 
-                      <v-list-item
-                        v-for="([title, icon], i) in admins"
-                        :key="i"
-                        link
-                      >
-                        <v-list-item-title v-text="title"></v-list-item-title>
-
-                        <v-list-item-icon>
-                          <v-icon v-text="icon"></v-icon>
-                        </v-list-item-icon>
-                      </v-list-item>
-                    </v-list-group>
-
-                    <v-list-group
-                      no-action
-                      sub-group
-                    >
-                      <template v-slot:activator>
-                        <v-list-item-content>
-                          <v-list-item-title>Actions</v-list-item-title>
-                        </v-list-item-content>
-                      </template>
-
-                      <v-list-item
-                        v-for="([title, icon], i) in cruds"
-                        :key="i"
-                        link
-                      >
-                        <v-list-item-title v-text="title"></v-list-item-title>
-
-                        <v-list-item-icon>
-                          <v-icon v-text="icon"></v-icon>
-                        </v-list-item-icon>
-                      </v-list-item>
-                    </v-list-group>
-                  </v-list-group>
-                </v-list>
+                </v-list-group>
+              </v-list>
               <v-divider></v-divider>
 
               <v-list
@@ -188,27 +155,68 @@
               >
                 <v-list-item link>
                   <v-list-item-icon>
-                    <v-icon>mdi-folder</v-icon>
+                    <v-icon>mdi-share-variant</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>My Files</v-list-item-title>
+                  <v-list-item-title>Compartir</v-list-item-title>
                 </v-list-item>
                 <v-list-item link>
                   <v-list-item-icon>
-                    <v-icon>mdi-account-multiple</v-icon>
+                    <v-icon>mdi-monitor-screenshot</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Shared with me</v-list-item-title>
+                  <v-list-item-title>Captura</v-list-item-title>
                 </v-list-item>
                 <v-list-item link>
                   <v-list-item-icon>
-                    <v-icon>mdi-star</v-icon>
+                    <v-icon>mdi-refresh-circle</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Starred</v-list-item-title>
+                  <v-list-item-title>Refrescar</v-list-item-title>
+                </v-list-item>
+                <v-list-item link>
+                  <v-list-item-icon>
+                    <v-icon>mdi-alert-circle</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-title>Reportar Errores</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-navigation-drawer>
           </v-card>
         </template>
       </l-control>
+
+      <!-- GeoJson -->
+      <!-- <l-geo-json
+        :geojson="geojson"
+        :optionsStyle="geoStyle"        
+      /> -->
+
+      <!-- GeoJson Markers -->
+
+
+      <!-- Markers -->
+      <div v-for="feature in geojson.features" :key="feature" >
+        <l-marker  :lat-lng="[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]" >
+          <l-icon
+            :icon-size="dynamicSize"
+            :icon-anchor="dynamicAnchor"
+          >
+            <img src="https://img.icons8.com/color/25/000000/unchecked-circle.png"/>
+            <p class="marker-label">{{feature.properties.site}}</p>
+            <div class="marker-temp-div">
+              <p class="marker-temp">
+                {{feature.properties.temp}}
+                <img class="marker-temp-icon" src="https://img.icons8.com/android/15/000000/thermometer.png"/>
+              </p>
+            </div>
+            <div class="marker-wind-div">
+              <p class="marker-wind">
+                {{feature.properties.wspd}}kph
+                <img class="marker-wind-icon" src="https://img.icons8.com/fluent-systems-filled/15/000000/wind.png"/>
+              </p>
+            </div>
+          </l-icon>
+          </l-marker>
+      </div>
+      
 
       <!-- CIRCLE -->
       <div v-if="mapconfig.showCircle">
@@ -227,19 +235,21 @@
 <script>
 // leaflet imports
 import { latLng } from "leaflet";
-import { LMap, LTileLayer, LCircle, LControl, LControlZoom } from "vue2-leaflet";
+import { LMap, LTileLayer, LCircle, LControl, LControlZoom, LIcon, LMarker } from "vue2-leaflet";
 import { Icon } from 'leaflet';
 // 100vh div import
 import vue100vh from 'vue-100vh'
 // Icons
 import CameraIcon from 'mdi-vue/Camera.vue';
 
-
 // html2canvas
 import html2canvas from 'html2canvas'
 import Canvas2Image from 'canvas2image'
 // full screen
 import LControlFullscreen from 'vue2-leaflet-fullscreen';
+
+// GeoJson
+import importedJson from "./geoJson.json"
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -257,6 +267,8 @@ export default {
     LCircle,
     LControl,
     LControlZoom,
+    LIcon,
+    LMarker,
     // 
     vue100vh,
     // icons
@@ -275,10 +287,129 @@ export default {
         CiLatLon: [null,null],
         showSS: false,
       },
+      // general config
       zoom: 4,
       position: 'topright',
       center: [12.346246, -83.147781],
       selectedLayer: 0,
+      menu_type: null,
+      loading: false,
+      staticAnchor: [16, 37],
+      iconSize: 32,
+      // geoJSON
+      geojson: importedJson,
+      geoStyle: {
+        "color": "#ff7800",
+        "weight": 10,
+        "opacity": 0.25
+      },
+      // menus
+      menus: [
+        {
+          icon: 'mdi-weather-partly-snowy-rainy',
+          title: 'Metar',
+          active: false,
+          selected_option: 1,
+          items: [
+              {
+                title: 'Temperatura',
+                value: 1 
+              },
+              {
+                title: 'WindSp',
+                value: 2 
+              },
+              {
+                title: 'Wind',
+                value: 3 
+              },
+              {
+                title: 'Tiempo Presente WX',
+                value: 4 
+              },
+              {
+                title: 'Symbol',
+                value: 5 
+              }
+            ],
+        },
+        {
+          icon: 'mdi-space-station',
+          title: 'Satélite',
+          active: false,
+          selected_option: 1,
+          items: [
+              {
+                title: 'IR',
+                value: 1 
+              },
+              {
+                title: 'Vis',
+                value: 2 
+              },
+              {
+                title: 'VW',
+                value: 3 
+              },
+              {
+                title: 'Otros',
+                value: 4 
+              }
+            ],
+        },
+        {
+          icon: 'mdi-radar',
+          title: 'Radar',
+          active: false,
+          selected_option: 1,
+          items: [
+              {
+                title: 'Radar',
+                value: 1 
+              }
+            ],
+        },
+        {
+          icon: 'mdi-weather-lightning',
+          title: 'Rayos',
+          active: false,
+          selected_option: 1,
+          items: [
+              {
+                title: 'Rayos',
+                value: 1 
+              }
+            ],
+        },
+        {
+          icon: 'mdi-radio-tower',
+          title: 'Estaciones',
+          active: false,
+          selected_option: 1,
+          items: [
+              {
+                title: 'Temperatura',
+                value: 1 
+              },
+              {
+                title: 'WindSp',
+                value: 2 
+              },
+              {
+                title: 'Wind',
+                value: 3 
+              },
+              {
+                title: 'Tiempo Presente WX',
+                value: 4 
+              },
+              {
+                title: 'Symbol',
+                value: 5 
+              }
+            ],
+        }, 
+      ],
       admins: [
         ['Management', 'mdi-account-multiple-outline'],
         ['Settings', 'mdi-cog-outline'],
@@ -385,6 +516,12 @@ export default {
       this.center[1] = this.$route.query.lon;
     }
     // --- END Map Configurations ---
+
+    // --- Menu type to load ---
+    if( this.$route.query.menu ) {
+      this.menu_type = this.$route.query.menu;
+    }
+    // --- END - Menu type to load ---
     
     // --- Circle ---.
     if( this.$route.query.showCircle == 'true' && this.$route.query.CiLat && this.$route.query.CiLon ) {
@@ -410,7 +547,26 @@ export default {
     }
     // --- Circle end ---
   },
+  computed: {
+    dynamicSize () {
+      return [this.iconSize, this.iconSize * 1.15];
+    },
+    dynamicAnchor () {
+      return [this.iconSize / 2, this.iconSize * 1.15];
+    }
+  },
+  async created() {
+      console.log(this.geojson);
+      this.loading = true;
+      // const response = await fetch("https://aviationweather.gov/cgi-bin/json/MetarJSON.php?zoom=8&filter=prior&density=0&taf=false&bbox=-104.94,1.79,-60.99,28.15/");
+      // const data = await response.json();
+      // this.geojson = data;
+      this.loading = false;
+  },
   watch: {
+    menus: function(val){
+      console.log(val);
+    },
     selectedLayer: function (val) {
       console.log(val);
       if(val == 0){
@@ -465,6 +621,64 @@ export default {
   font-weight: bolder;
   color: #aaa;
   text-shadow: #555;
+}
+.marker-label {
+    font-size: 13px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #9e9e9e;
+    border-width: thin;
+    background-color: #ffffffb8;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    right: 35px;
+    color: #5b5b5b;
+}
+
+.marker-temp {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    background: #ffffff8c;
+    border: 1px solid #9e9e9e;
+    color: #5b5b5b;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    bottom: 87px;
+    left: 35px;
+}
+
+.marker-temp-icon {
+  position: relative;
+  bottom: 10px;
+  left: 12px;
+}
+
+.marker-wind-div {
+    background: #ffffff8c;
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+    bottom: 165px;
+    left: 10px;
+    color: #5b5b5b;
+    position: relative;
+    height: 25px;
+    width: 135%;
+} 
+
+.marker-wind {
+    text-align: center;
+    font-size: 14px;  
+}
+
+.marker-wind-icon {
+  position: relative;
+  bottom: 5px;
+  left: 15px;
 }
 
 html, body {margin: 0; height: 100%; overflow: hidden}
