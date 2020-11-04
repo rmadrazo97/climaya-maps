@@ -42,7 +42,6 @@
 
           <v-list class="d-flex flex-wrap">
             <v-list-item>
-              <v-radio-group >
                 <v-radio-group v-model="selectedLayer">
                   <v-radio
                     v-for="(tile, index) in tileProviders"
@@ -59,7 +58,6 @@
                   </v-radio>
                   
                 </v-radio-group>
-              </v-radio-group>  
             </v-list-item>
           </v-list>
         </v-menu>
@@ -118,8 +116,8 @@
                   
               <v-list>
                 <v-list-group
-                  v-for="item in menus"
-                  :key="item.title"
+                  v-for="(item, idx1) in menus"
+                  :key="idx1"
                   v-model="item.active"
                   :prepend-icon="item.icon"
                   no-action
@@ -130,20 +128,20 @@
                     </v-list-item-content>
                   </template>
 
-                  <v-radio-group v-model="item.selected_option" :mandatory="false">
+                  <v-container :multiple="true" v-model="item.selected_option" :mandatory="false">
                     <v-list-item
-                      v-for="child in item.items"
-                      :key="child.title"
+                      v-for="(child, idx2) in item.items"
+                      :key="idx2"
                     >
                       <v-list-item-content class="pl-3">                        
-                        <v-radio
-                          :key="child.title"
+                        <v-checkbox
                           :label="child.title"
                           :value="child.value"
-                        ></v-radio>
+                          v-model="selectedOptions"
+                        ></v-checkbox>
                       </v-list-item-content>
                     </v-list-item>
-                  </v-radio-group>
+                  </v-container>
 
                 </v-list-group>
               </v-list>
@@ -193,26 +191,43 @@
 
 
       <!-- Markers -->
-      <div v-for="feature in geojson.features" :key="feature" >
+      <div v-for="(feature, idx) in geojson.features" :key="idx" >
         <l-marker  :lat-lng="[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]" >
           <l-icon
             :icon-size="dynamicSize"
             :icon-anchor="dynamicAnchor"
           >
-            <img src="https://img.icons8.com/color/25/000000/unchecked-circle.png"/>
-            <p class="marker-label">{{feature.properties.site}}</p>
-            <div class="marker-temp-div">
-              <p class="marker-temp">
-                {{feature.properties.temp}}
-                <img class="marker-temp-icon" src="https://img.icons8.com/android/15/000000/thermometer.png"/>
-              </p>
+            
+            <v-icon :color="getFlightCat(feature.properties.fltcat)">
+              mdi-circle
+            </v-icon>
+            <div v-if="currentZoom >= 6.5">
+              <p class="marker-label">{{feature.properties.id}}</p>
+              <div class="marker-temp-div" >
+                <p class="marker-temp" :style="`background: ${ tempScale(feature.properties.temp)} !important;`">
+                  {{feature.properties.temp}}
+                  <img class="marker-temp-icon" src="https://img.icons8.com/android/15/000000/thermometer.png"/>
+                </p>
+              </div>
+              <div class="marker-wind-div d-flex" :style="`background: ${ windScale(feature.properties.wspd)} !important;`">
+                <div v-if="!feature.properties.wspd == 0">
+                  <v-icon :color="getFlightCat(feature.properties.fltcat)" 
+                    :style="`transform: rotate(${getWindDirRotation(feature.properties.wdir)}deg);`">
+                    mdi-arrow-right-thick
+                  </v-icon>
+                </div>
+                <div v-else>
+                  <v-icon>
+                    mdi-circle-off-outline
+                  </v-icon>
+                </div>
+                <p class="marker-wind" >
+                  {{feature.properties.wspd}}KT
+                  <img class="marker-wind-icon" src="https://img.icons8.com/fluent-systems-filled/15/000000/wind.png"/>
+                </p>
+              </div>
             </div>
-            <div class="marker-wind-div">
-              <p class="marker-wind">
-                {{feature.properties.wspd}}kph
-                <img class="marker-wind-icon" src="https://img.icons8.com/fluent-systems-filled/15/000000/wind.png"/>
-              </p>
-            </div>
+            
           </l-icon>
           </l-marker>
       </div>
@@ -238,18 +253,21 @@ import { latLng } from "leaflet";
 import { LMap, LTileLayer, LCircle, LControl, LControlZoom, LIcon, LMarker } from "vue2-leaflet";
 import { Icon } from 'leaflet';
 // 100vh div import
-import vue100vh from 'vue-100vh'
+import vue100vh from 'vue-100vh';
 // Icons
 import CameraIcon from 'mdi-vue/Camera.vue';
 
 // html2canvas
-import html2canvas from 'html2canvas'
-import Canvas2Image from 'canvas2image'
+import html2canvas from 'html2canvas';
+import Canvas2Image from 'canvas2image';
 // full screen
 import LControlFullscreen from 'vue2-leaflet-fullscreen';
 
 // GeoJson
-import importedJson from "./geoJson.json"
+import importedJson from "./geoJson.json";
+
+// chroma color scales
+import chroma from "chroma-js";
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -288,6 +306,7 @@ export default {
         showSS: false,
       },
       // general config
+      selectedOptions: [],
       zoom: 4,
       position: 'topright',
       center: [12.346246, -83.147781],
@@ -314,6 +333,10 @@ export default {
               {
                 title: 'Temperatura',
                 value: 1 
+              },
+              {
+                title: 'Barbas',
+                value: 6 
               },
               {
                 title: 'WindSp',
@@ -480,12 +503,42 @@ export default {
         zoomSnap: 0.5,
         zoomControl: false
       },
-      showMap: true
+      showMap: true,
+      // color scales
+      windScale: null,
+      tempScale: null
     };
   },
   methods: {
+    getFlightCat(cat){
+      switch (cat) {
+        case "LIFR":
+          return "magenta";
+        case "IFR":
+          return "red";
+        case "MVFR":
+          return "blue";
+        case "VFR":
+          return "green";
+        default:
+          //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+          return "black";
+      }
+    },
+    getWindDirRotation(p_dir){
+      if (p_dir>=  0 && p_dir< 13) return "90";
+      if (p_dir>= 13 && p_dir< 58) return "135";
+      if (p_dir>= 58 && p_dir<103) return "180";
+      if (p_dir>=103 && p_dir<148) return "225";
+      if (p_dir>=148 && p_dir<193) return "270";
+      if (p_dir>=193 && p_dir<238) return "315"; 
+      if (p_dir>=238 && p_dir<283) return "0";
+      if (p_dir>=283 && p_dir<328) return "45";
+      if (p_dir>=328)              return "90";
+    },
     zoomUpdate(zoom) {
       this.currentZoom = zoom;
+      console.log(this.currentZoom);
     },
     centerUpdate(center) {
       this.currentCenter = center;
@@ -507,7 +560,18 @@ export default {
     }
   },
   beforeMount(){
-    
+    let windColorArr = [
+      '#FFFFFF','#CDFFFE','#99FFCC','#99FF98','#9AFF67',
+      '#9AFE01','#CCFF00','#FEFF00','#FE9900','#FF6602',
+      '#FE3403','#FE0302'
+    ]
+    let tempColorArr = [
+      '#000000','#303030','#312F9B','#080282','#1B00FC','#2F67F0',
+      '#99CDFB','#4FC1BE','#048004','#9DCF00','#FED100',
+      '#FE6602','#F50304'
+    ]
+    this.windScale = chroma.scale(windColorArr).domain([0,60], 12, 'quantiles');
+    this.tempScale = chroma.scale(tempColorArr).domain([0,40], 13, 'quantiles');
     console.log(this.$route.query);
     // --- Map Configurations ---
     if( this.$route.query.zoom && this.$route.query.lat && this.$route.query.lon ) {
@@ -546,6 +610,9 @@ export default {
 
     }
     // --- Circle end ---
+  },
+  mounted(){
+
   },
   computed: {
     dynamicSize () {
@@ -623,17 +690,17 @@ export default {
   text-shadow: #555;
 }
 .marker-label {
-    font-size: 13px;
+    font-size: 11px;
     border-radius: 5px;
     border-style: solid;
     border-color: #9e9e9e;
     border-width: thin;
     background-color: #ffffffb8;
-    width: 100px;
+    width: 60px;
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
-    right: 35px;
+    right: 15px;
     color: #5b5b5b;
 }
 
@@ -644,12 +711,12 @@ export default {
     padding: 0px;
     background: #ffffff8c;
     border: 1px solid #9e9e9e;
-    color: #5b5b5b;
+    color: #242424;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     position: relative;
-    bottom: 87px;
-    left: 35px;
+    bottom: 65px;
+    left: 40px;
 }
 
 .marker-temp-icon {
@@ -662,23 +729,29 @@ export default {
     background: #ffffff8c;
     border-radius: 5px;
     border: 1px solid #9e9e9e;
-    bottom: 165px;
-    left: 10px;
+    bottom: 145px;
+    left: -10px;
     color: #5b5b5b;
     position: relative;
     height: 25px;
-    width: 135%;
+    width: 200%;
 } 
 
 .marker-wind {
     text-align: center;
-    font-size: 14px;  
+    font-size: 15px;  
 }
 
 .marker-wind-icon {
   position: relative;
   bottom: 5px;
-  left: 15px;
+  left: 20px;
+}
+
+.marker-wind-dir {
+  position: relative;
+  bottom: 65px;
+  left: 40px;
 }
 
 html, body {margin: 0; height: 100%; overflow: hidden}
